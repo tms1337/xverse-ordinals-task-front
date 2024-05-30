@@ -52,11 +52,7 @@ const MainPage = () => {
   };
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen max-w-md mx-auto p-4 bg-[#1a1a1a] relative overflow-hidden">
-=======
     <MainVerticalLayout>
->>>>>>> master
       <Header />
       <OwnerAddress />
 
@@ -79,11 +75,7 @@ const MainPage = () => {
           inscription={id}
         />
       ))}
-<<<<<<< HEAD
-    </div>
-=======
     </MainVerticalLayout>
->>>>>>> master
   );
 };
 
