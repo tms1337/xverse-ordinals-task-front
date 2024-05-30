@@ -1,6 +1,18 @@
 ## Deployment sample
 
-Deployed at:
+Deployed at: https://xverse-ordinals-task-front.vercel.app
+
+---
+
+## Screenshots
+
+MainScreen:
+
+<img src="https://imgur.com/df7DmjZ.png" width=750 />
+
+DetailsScreen:
+
+<img src="https://imgur.com/yed662a.png" width=750 />
 
 ---
 
