@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 
+import MainVerticalLayout from "../../layouts/MainVerticalLayout";
+
 import Header from "./components/Header";
 import InscriptionDetails from "./components/InscriptionDetails";
 import AttributesSection from "./components/AttributesSection";
@@ -38,7 +40,7 @@ const NFTDetailsPage = () => {
   if (!ordinal) return <div>Loading...</div>;
 
   return (
-    <div className="min-h-screen max-w-md mx-auto p-4 bg-[#1a1a1a] relative overflow-hidden">
+    <MainVerticalLayout>
       <Header />
       <ImageSection url={imgUrl} />
 
@@ -53,7 +55,7 @@ const NFTDetailsPage = () => {
         location={ordinal.location}
         genesisTransaction={ordinal.genesis_tx_id}
       />
-    </div>
+    </MainVerticalLayout>
   );
 };
 

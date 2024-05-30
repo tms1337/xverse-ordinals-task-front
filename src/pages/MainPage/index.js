@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import MainVerticalLayout from "../../layouts/MainVerticalLayout";
+
 import Header from "./components/Header";
 import OwnerAddress from "./components/OwnerAddress";
 import Results from "./components/Results";
@@ -50,7 +52,7 @@ const MainPage = () => {
   };
 
   return (
-    <div className="min-h-screen max-w-md mx-auto p-4 bg-[#1a1a1a] relative overflow-hidden">
+    <MainVerticalLayout>
       <Header />
       <OwnerAddress />
 
@@ -73,7 +75,7 @@ const MainPage = () => {
           inscription={id}
         />
       ))}
-    </div>
+    </MainVerticalLayout>
   );
 };
 
