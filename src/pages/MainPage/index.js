@@ -40,6 +40,7 @@ const MainPage = () => {
       );
       setOrdinalUTXOs(ordinals);
       const ordinalIds = ordinaUTXOs_to_ordinalIds(ordinals);
+
       const trimmedOrdinalIds = ordinalIds_to_trimmedOrdinalIds(ordinalIds, 8);
       console.log({ trimmedOrdinalIds });
       setTrimmedOrdinalIds(sliceTrimmedOrdinalIds(trimmedOrdinalIds));
