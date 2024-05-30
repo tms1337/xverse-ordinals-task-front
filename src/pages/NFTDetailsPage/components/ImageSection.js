@@ -1,12 +1,7 @@
 import React from "react";
 
 const ImageSection = ({ url }) => {
-  return (
-    <img
-      src={url}
-      className="w-[375px] h-[375px] absolute left-[-1px] top-[87px] object-cover"
-    />
-  );
+  return <img src={url} className="w-full h-auto mt-4 object-cover" />;
 };
 
 export default ImageSection;

@@ -42,7 +42,6 @@ const MainPage = () => {
       const ordinalIds = ordinaUTXOs_to_ordinalIds(ordinals);
 
       const trimmedOrdinalIds = ordinalIds_to_trimmedOrdinalIds(ordinalIds, 8);
-      console.log({ trimmedOrdinalIds });
       setTrimmedOrdinalIds(sliceTrimmedOrdinalIds(trimmedOrdinalIds));
     } else {
       console.log("Invalid BTC Address");
@@ -50,13 +49,10 @@ const MainPage = () => {
   };
 
   return (
-    <MainVerticalLayout>
+    <div className="min-h-screen max-w-md mx-auto p-4 bg-[#1a1a1a] relative overflow-hidden">
       <Header />
       <OwnerAddress />
-      <Results />
-      {trimmedOrdinalIds.map((id, index) => (
-        <ResultItem key={index} top={270 + index * 60} inscription={id} />
-      ))}
+
       <form onSubmit={handleLookUpSubmit}>
         <InputField
           value={stateInputs.ownerAddress}
@@ -65,7 +61,13 @@ const MainPage = () => {
         />
         <LookupButton />
       </form>
-    </MainVerticalLayout>
+
+      <Results />
+
+      {trimmedOrdinalIds.map((id, index) => (
+        <ResultItem key={index} top={270 + index * 60} inscription={id} />
+      ))}
+    </div>
   );
 };
 

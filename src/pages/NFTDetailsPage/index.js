@@ -8,7 +8,7 @@ import InscriptionID from "./components/InscriptionID";
 import OwnerAddress from "./components/OwnerAddress";
 import ImageSection from "./components/ImageSection";
 
-import { queryImage, queryOrdinalPerAddressAndId } from "./data/queries";
+import { queryOrdinalPerAddressAndId } from "./data/queries";
 
 const getQueryParams = () => {
   const params = new URLSearchParams(window.location.search);
@@ -20,7 +20,6 @@ const getQueryParams = () => {
 
 const NFTDetailsPage = () => {
   const [ordinal, setOrdinal] = useState(null);
-  const [imgSVG, setImgSVG] = useState(null);
   const { address, inscription } = getQueryParams();
 
   useEffect(() => {
@@ -30,21 +29,17 @@ const NFTDetailsPage = () => {
     };
 
     fetchOrdinal();
-
-    const fetchImage = async () => {
-      const data = await queryImage(address, inscription);
-      setImgSVG(data);
-    };
-
-    fetchImage();
   }, [address, inscription]);
 
   if (!ordinal) return <div>Loading...</div>;
 
   return (
-    <div className="w-screen h-screen relative overflow-hidden bg-[#1a1a1a]">
+    <div className="min-h-screen max-w-md mx-auto p-4 bg-[#1a1a1a] relative overflow-hidden">
       <Header />
-      <ImageSection url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxVER9fGEmdEvgKoNMdaWRBH8qiz4ywOBPWw&s" />
+      <ImageSection
+        url={`https://img.cryptokitties.co/0x06012c8cf97bead5deae237070f9587f8e7a266d/1092182.svg`}
+      />
+
       <InscriptionDetails inscription={ordinal.id.slice(0, 6)} />
       <HorizontalLine />
       <InscriptionID inscriptionId={ordinal.id} />

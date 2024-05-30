@@ -2,7 +2,7 @@ import React from "react";
 
 const InscriptionDetails = ({ inscription }) => {
   return (
-    <p className="w-[146px] h-3 absolute left-[17px] top-[487px] text-base font-semibold text-left text-white">
+    <p className="w-full text-base font-semibold text-left text-white mt-4 break-words">
       Inscription {inscription}
     </p>
   );

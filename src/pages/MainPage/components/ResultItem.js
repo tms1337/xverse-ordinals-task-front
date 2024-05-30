@@ -1,24 +1,22 @@
 import React from "react";
+// import { useLocation } from "react-router-dom";
 
-const ResultItem = ({ top, inscription }) => {
+const ResultItem = ({ top, inscription, id = "faruk..." }) => {
+  // const location = useLocation();
+  // const currentUrl = location.pathname;
+
   return (
-    <>
-      <div className="w-[281px] h-[49px]">
-        <p
-          className="w-[281px] h-[49px] absolute left-[21px] text-sm font-medium text-left text-white"
-          style={{ top: `${top}px` }}
-        >
-          Inscription {inscription}
-        </p>
-      </div>
+    <div className="relative my-4 mx-auto max-w-md">
+      <p className="text-sm font-medium text-left text-white">
+        Inscription {inscription}
+      </p>
       <svg
         width="9"
         height="16"
         viewBox="0 0 9 16"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="absolute"
-        style={{ left: `${top + 75.63}px`, top: `${top + 15.63}px` }}
+        className="absolute right-0 top-1"
         preserveAspectRatio="none"
       >
         <path
@@ -29,7 +27,10 @@ const ResultItem = ({ top, inscription }) => {
           strokeLinejoin="round"
         ></path>
       </svg>
-    </>
+      {/* <a href={`${currentUrl}/${id}`} className="absolute right-0 bottom-0">
+        <button className="text-white">Go to {id}</button>
+      </a> */}
+    </div>
   );
 };
 

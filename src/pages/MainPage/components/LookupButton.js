@@ -4,9 +4,9 @@ const LookupButton = () => {
   return (
     <button
       type="submit"
-      className="w-[342px] h-[46px] absolute left-[15px] top-[166px] rounded-[10px] bg-[#465ae9]"
+      className="w-full max-w-md mx-auto p-2 mt-4 bg-[#465ae9] rounded-md text-white"
     >
-      <p className="text-sm font-medium text-center text-white">Look up</p>
+      Look up
     </button>
   );
 };

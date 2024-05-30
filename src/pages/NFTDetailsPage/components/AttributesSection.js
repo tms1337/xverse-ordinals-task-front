@@ -8,52 +8,54 @@ const AttributesSection = ({
   genesisTransaction,
 }) => {
   return (
-    <div className="w-[343px] h-[427px] absolute left-[17px] top-[779px]">
-      <div className="w-[343px] h-[66px] absolute top-[92px]">
-        <p className="absolute left-[3px] top-0 text-xs font-medium text-left text-white/70">
+    <div className="w-full mt-8">
+      <div className="mb-4">
+        <p className="text-xs font-medium text-left text-white/70">
           Content Type
         </p>
-        <div className="w-[343px] h-10 absolute left-[-1px] top-6 rounded-lg bg-[#24252c]"></div>
-        <p className="w-[315px] absolute left-3 top-9 text-sm font-medium text-left text-white">
-          {contentType}
-        </p>
+        <div className="w-full h-10 mt-2 rounded-lg bg-[#24252c] flex items-center p-2">
+          <p className="text-sm font-medium text-left text-white">
+            {contentType}
+          </p>
+        </div>
       </div>
-      <div className="w-[343px] h-[66px] absolute top-[0]">
-        <p className="absolute left-[3px] top-0 text-xs font-medium text-left text-white/70">
+      <div className="mb-4">
+        <p className="text-xs font-medium text-left text-white/70">
           Output Value
         </p>
-        <div className="w-[343px] h-10 absolute left-[-1px] top-6 rounded-lg bg-[#24252c]"></div>
-        <p className="w-[315px] absolute left-3 top-9 text-sm font-medium text-left text-white">
-          {outputValue}
-        </p>
+        <div className="w-full h-10 mt-2 rounded-lg bg-[#24252c] flex items-center p-2">
+          <p className="text-sm font-medium text-left text-white">
+            {outputValue}
+          </p>
+        </div>
       </div>
-      <div className="w-[343px] h-[66px] absolute top-[184px]">
-        <p className="absolute left-[3px] top-0 text-xs font-medium text-left text-white/70">
+      <div className="mb-4">
+        <p className="text-xs font-medium text-left text-white/70">
           Content Length
         </p>
-        <div className="w-[343px] h-10 absolute left-[-1px] top-6 opacity-80 rounded-lg bg-[#24252c]"></div>
-        <p className="w-[315px] absolute left-3 top-9 text-sm font-medium text-left text-white">
-          {contentLength} bytes
-        </p>
+        <div className="w-full h-10 mt-2 rounded-lg bg-[#24252c] flex items-center p-2">
+          <p className="text-sm font-medium text-left text-white">
+            {contentLength} bytes
+          </p>
+        </div>
       </div>
-      <div className="w-[343px] h-[66px] absolute top-[276px]">
-        <p className="absolute left-[3px] top-0 text-xs font-medium text-left text-white/70">
-          Location
-        </p>
-        <div className="w-[343px] h-10 absolute left-[-1px] top-6 rounded-lg bg-[#24252c]"></div>
-        <p className="w-[315px] absolute left-3 top-9 text-sm font-medium text-left text-white">
-          {location}
-          <br />
-        </p>
+      <div className="mb-4">
+        <p className="text-xs font-medium text-left text-white/70">Location</p>
+
+        <div className="w-full mt-2 rounded-lg bg-[#24252c] p-2 break-words">
+          <p className="text-sm font-medium text-left text-white">{location}</p>
+        </div>
       </div>
-      <div className="w-[343px] h-[66px] absolute top-[368px]">
-        <p className="absolute left-[3px] top-0 text-xs font-medium text-left text-white/70">
+
+      <div className="mb-4">
+        <p className="text-xs font-medium text-left text-white/70">
           Genesis Transaction
         </p>
-        <div className="w-[343px] h-10 absolute left-[-1px] top-6 opacity-80 rounded-lg bg-[#24252c]"></div>
-        <p className="w-[315px] absolute left-3 top-9 text-sm font-medium text-left text-white">
-          {genesisTransaction}
-        </p>
+        <div className="w-full mt-2 rounded-lg bg-[#24252c] p-2 break-words">
+          <p className="text-sm font-medium text-left text-white">
+            {genesisTransaction}
+          </p>
+        </div>
       </div>
     </div>
   );
