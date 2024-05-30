@@ -1,12 +1,15 @@
 import React from "react";
-// import { useLocation } from "react-router-dom";
 
-const ResultItem = ({ top, inscription, id = "faruk..." }) => {
-  // const location = useLocation();
-  // const currentUrl = location.pathname;
-
+const ResultItem = ({ address, top, inscription }) => {
   return (
-    <div className="relative my-4 mx-auto max-w-md">
+    <div
+      className="relative my-4 mx-auto max-w-md"
+      onClick={() =>
+        window.location.replace(
+          `${window.location.origin}/?address=${address}&inscription=${inscription}`
+        )
+      }
+    >
       <p className="text-sm font-medium text-left text-white">
         Inscription {inscription}
       </p>
@@ -27,9 +30,6 @@ const ResultItem = ({ top, inscription, id = "faruk..." }) => {
           strokeLinejoin="round"
         ></path>
       </svg>
-      {/* <a href={`${currentUrl}/${id}`} className="absolute right-0 bottom-0">
-        <button className="text-white">Go to {id}</button>
-      </a> */}
     </div>
   );
 };

@@ -3,7 +3,12 @@ import React from "react";
 const Header = () => {
   return (
     <div className="w-full h-16 flex items-center justify-center relative bg-[#1a1a1a]">
-      <div className="absolute left-4 top-4">
+      <div
+        className="absolute left-4 top-4"
+        onClick={() => {
+          window.location.replace(`${window.location.origin}`);
+        }}
+      >
         <svg
           width="28"
           height="28"

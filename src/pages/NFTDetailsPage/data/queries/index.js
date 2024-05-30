@@ -1,8 +1,11 @@
 import axios from "axios";
 
+const ORDINAL_PER_ADDR_ID = (address, inscription) =>
+  `https://api-3.xverse.app/v1/address/${address}/ordinals/inscriptions/${inscription}`;
+
 export const queryOrdinalPerAddressAndId = async (address, inscription) => {
   try {
-    const url = `https://api-3.xverse.app/v1/address/${address}/ordinals/inscriptions/${inscription}`;
+    const url = ORDINAL_PER_ADDR_ID(address, inscription);
 
     const response = await axios.get(url);
 
