@@ -20,7 +20,11 @@ const getQueryParams = () => {
 
 const NFTDetailsPage = () => {
   const [ordinal, setOrdinal] = useState(null);
+
   const { address, inscription } = getQueryParams();
+
+  const INSCRIPTION_CONTENT_URL = `https://ord.xverse.app/content`;
+  const imgUrl = `${INSCRIPTION_CONTENT_URL}/${inscription}`;
 
   useEffect(() => {
     const fetchOrdinal = async () => {
@@ -36,9 +40,7 @@ const NFTDetailsPage = () => {
   return (
     <div className="min-h-screen max-w-md mx-auto p-4 bg-[#1a1a1a] relative overflow-hidden">
       <Header />
-      <ImageSection
-        url={`https://img.cryptokitties.co/0x06012c8cf97bead5deae237070f9587f8e7a266d/1092182.svg`}
-      />
+      <ImageSection url={imgUrl} />
 
       <InscriptionDetails inscription={ordinal.id.slice(0, 6)} />
       <HorizontalLine />

@@ -11,7 +11,8 @@ const ResultItem = ({ address, top, inscription }) => {
       }
     >
       <p className="text-sm font-medium text-left text-white">
-        Inscription {inscription}
+        <span className="mr-4 text-lg">Inscription</span>
+        <span className="text-gray-400">{inscription.slice(0, 32)}</span>
       </p>
       <svg
         width="9"
