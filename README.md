@@ -1,6 +1,6 @@
 ## Deployment sample
 
-Deployed at: https://xverse-ordinals-task-front.vercel.app
+Deployed at: https://xverse-ordinals.vercel.app/
 
 ---
 
