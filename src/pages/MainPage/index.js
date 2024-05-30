@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import MainVerticalLayout from "../../layouts/MainVerticalLayout";
+
 import Header from "./components/Header";
 import OwnerAddress from "./components/OwnerAddress";
 import Results from "./components/Results";
@@ -18,7 +20,8 @@ import {
 
 const MainPage = () => {
   const [stateInputs, setStateInputs] = useState({
-    ownerAddress: "",
+    ownerAddress:
+      "bc1pe6y27ey6gzh6p0j250kz23zra7xn89703pvmtzx239zzstg47j3s3vdvvs",
   });
   const [inputError, setInputError] = useState(false);
   const [ordinalUTXOs, setOrdinalUTXOs] = useState([]);
@@ -49,7 +52,11 @@ const MainPage = () => {
   };
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen max-w-md mx-auto p-4 bg-[#1a1a1a] relative overflow-hidden">
+=======
+    <MainVerticalLayout>
+>>>>>>> master
       <Header />
       <OwnerAddress />
 
@@ -72,7 +79,11 @@ const MainPage = () => {
           inscription={id}
         />
       ))}
+<<<<<<< HEAD
     </div>
+=======
+    </MainVerticalLayout>
+>>>>>>> master
   );
 };
 
